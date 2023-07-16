@@ -1,0 +1,66 @@
+{
+  "name": "MW_EXT_UI",
+  "version": "1.0.0",
+  "author": [
+    "[https://ihub.to/ iHub TO]",
+    "[https://kitsune.solar/ Kitsune Solar]",
+    "..."
+  ],
+  "url": "https://ihub.to/",
+  "descriptionmsg": "mw-theme-desc",
+  "license-name": "[https://choosealicense.com/licenses/mit/ MIT]",
+  "type": "other",
+  "require": {
+    "MediaWiki": ">= 1.31.0",
+    "extensions": {
+      "MW_EXT_Kernel": "*"
+    }
+  },
+  "config": {
+    "EXT_Meta_FA_Version": {
+      "value": "5.1.0"
+    }
+  },
+  "AutoloadClasses": {
+    "MediaWiki\\Extension\\PkgStore\\MW_EXT_UI": "MW_EXT_UI.class.php"
+  },
+  "Hooks": {
+    "BeforePageDisplay": [
+      "MediaWiki\\Extension\\PkgStore\\MW_EXT_UI::onBeforePageDisplay"
+    ]
+  },
+  "MessagesDirs": {
+    "MW_EXT_UI": [
+      "i18n"
+    ]
+  },
+  "ResourceModules": {
+    "ext.mw.theme": {
+      "scripts": [
+        "scripts/functions.min.js",
+        "scripts/plugins.min.js",
+        "scripts/typography.min.js"
+      ],
+      "position": "bottom",
+      "targets": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    "ext.mw.theme.styles": {
+      "styles": [
+        "styles/theme.css"
+      ],
+      "position": "top",
+      "targets": [
+        "desktop",
+        "mobile"
+      ]
+    }
+  },
+  "ResourceFileModulePaths": {
+    "localBasePath": "modules",
+    "remoteExtPath": "MW_EXT_UI/modules"
+  },
+  "manifest_version": 2
+}

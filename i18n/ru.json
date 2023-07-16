@@ -1,0 +1,11 @@
+{
+  "@metadata": {
+    "authors": [
+      "iHub TO"
+    ]
+  },
+  "group-editor": "Редакторы",
+  "group-editor-member": "{{GENDER:$1|Редактор}}",
+  "grouppage-editor": "{{ns:project}}:Редакторы",
+  "mw-meta-desc": "Интеграция дополнительных элементов оформления в движок MediaWiki."
+}
